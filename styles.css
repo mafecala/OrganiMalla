@@ -7,7 +7,7 @@ body{
 /* Rectangle 6 */
 
     width: 488px;
-    height: 635px;
+    height: 535px;
     padding: 2rem;
     margin: 6rem auto;
 
@@ -54,6 +54,7 @@ border-radius: 10px;
     color: #636363;
 }
 
+
 select{
     margin-top: 10px;
     font-family: inherit;
@@ -86,3 +87,4 @@ select{
     background-color: #FF6464;
     font-weight: bold;
 }
+

@@ -10,23 +10,25 @@
 
 </head>
 <body>
+    <form id="form">
         <div class="tarjeta">
             <h1 class="title">Bienvenido a <span class="title1">ORGANIMALLA</span> </h1>
             <p class='description'>Ingresa tus datos</p>
 
             <div class="pregunta">
                 <label for="name" class="etiqueta">Nombre</label>
-                <input type="teIngeniería Eléctricat" class="input">
+                <input type="text" class="input" required>
             </div>
 
             <div class="pregunta">
                 <label for="correo" class="etiqueta">Correo institucional</label>
-                <input type="teIngeniería Eléctricat" class="input">
+                <input type="text" class="input" required>
             </div>
 
             <div class="pregunta">
                 <label for="carrera" class="etiqueta">Carrera</label>
                 <select name="opcionescarrera" id="lang">
+                  <option value="DEFAULT">Elige tu carrera</option>
                   <option value="Ingeniería Agrícola">Ingeniería Agrícola</option>
                   <option value="Ingeniería Civil">Ingeniería Civil</option>
                   <option value="Ingeniería Electrónica">Ingeniería Electrónica</option>
@@ -40,14 +42,12 @@
                 
             </div>
 
-            <div class="pregunta">
-                <label for="materias" class="etiqueta">Materias</label>
-                <input type="teIngeniería Eléctricat" class="input">
-            </div>
-
-            <button class="botonenviar">Enviar</button>
-
+            
+            <button type="submit" class="botonenviar">Enviar</button>
+            
         </div>
+
+    </form>
 </body>
 
 </html>
