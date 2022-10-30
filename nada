@@ -1,0 +1,6 @@
+activar entorno virtual:
+Set-ExecutionPolicy Unrestricted -Scope Process
+venv\Scripts\activate
+
+correr aplicacion:
+flask --app main run
