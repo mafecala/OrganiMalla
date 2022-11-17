@@ -1,0 +1,58 @@
+body{
+    font-family: "Nunito";
+    margin: 5%;
+    background-color: rgb(230, 230, 230);
+}
+
+table.minitable{
+    border: none;
+}
+
+table.maintable{
+    width: 100%;    
+}
+
+table.maintable th{
+    font-size: larger;
+    color: rgb(170, 170, 170);
+    padding: 18px;
+}
+table.maintable td { 
+    padding: 20px;
+    border-top: 1px solid rgb(170, 170, 170);
+}
+
+
+.saludo{
+    padding-left: 130px;
+}
+
+.tabletitle{
+    margin-right: 120px;
+    font-size: 23px;
+    
+    color: #ff6060;
+}
+
+#buscador{
+    margin-left: 400px;
+    border-radius: 10px;
+    height: 25px;
+    font: inherit;
+    background: url(https://cdn4.iconfinder.com/data/icons/fluent-outline-20px-vol-5/20/ic_fluent_search_20_regular-256.png);
+    background-size: 20px;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-position-x: 3px;
+    background-position-y: center;
+}   
+
+.contenedor1{
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    place-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; 
+    border-radius: 25px;
+}

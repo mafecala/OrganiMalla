@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materias</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Patua+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    
+</head>
+<body>
+    <header>
+        <h2 class="saludo">Hola, estudiante 👋</h1>
+    </header>
+    <div class="contenedor1">
+    <table class ="minitable">
+      <tr>
+        <td><h2 class="tabletitle">Lista de materias</h2></td>
+        <td><input id="buscador" type="text" onkeyup="tableSearch()" placeholder="Buscar" ></td>
+      </tr>  
+  </table>
+    <table class="maintable" id="thetable">
+        <tr>
+          <th>Materia</th>
+          <th>Código</th>
+          <th>Créditos</th>
+          <th>Tipología</th>
+          <th>Recomendación</th>
+          <th>Estado</th>
+          
+        </tr>
+        <tr>
+          <td>Cálculo Integral</td>
+          <td>0001</td>
+          <td>4</td>
+          <td>Fund. Optativa</td>
+          <td>link</td>
+          <td>DISPONIBLE</td>
+        </tr>
+        <tr>
+            <td>Álgebra Lineal</td>
+            <td>0002</td>
+            <td>4</td>
+            <td>Fund. Optativa</td>
+            <td>link</td>
+            <td>DISPONIBLE</td>
+        </tr>
+        <tr>
+          <td>Programación Orientada a Objetos</td>
+          <td>0003</td>
+          <td>3</td>
+          <td>Disciplinar Obligatoria </td>
+          <td>link</td>
+          <td>DISPONIBLE</td>
+      </tr>
+      <tr>
+        <td>Cálculo Diferencial</td>
+        <td>0004</td>
+        <td>4</td>
+        <td>Fund. Optativa</td>
+        <td>link</td>
+        <td>DISPONIBLE</td>
+      </tr>
+      <tr>
+        <td>Pensamiento Sistémico</td>
+        <td>0005</td>
+        <td>3</td>
+        <td>Disciplinar Obligatoria</td>
+        <td>link</td>
+        <td>DISPONIBLE</td>
+      </tr>
+      </table>
+    </div>
+    <script type="text/javascript" src=main.js></script>
+</body>
+</html>
