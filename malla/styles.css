@@ -37,9 +37,6 @@ tr#IX{
 tr#X{
     background-color: #FF8B8B;
 }
-td:empty{
-    background-color: #ffffff;
-}
 
 td, th{
     padding: 10px ;
@@ -51,4 +48,9 @@ td, th{
 
 table{
     margin: 20px;
+    text-align: center;
+}
+
+#content{
+    font-size: larger;
 }
