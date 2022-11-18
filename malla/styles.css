@@ -1,0 +1,54 @@
+body{
+    font-family: Nunito;
+}
+#titulo{
+    font-family: Patua One;
+    font-size: 35px;
+    padding-left: 20px;
+    color: #ff6767;
+}
+tr#I{
+    background-color:  #649aff;
+}
+tr#II{
+    background-color:  #89b2ff;
+}
+tr#III{
+    background-color:  #a8c6ff;
+}
+tr#IV{
+    background-color:  #cadcff;
+}
+tr#V{
+    background-color: #e0d4fd;
+}
+tr#VI{
+    background-color: #f8d7fd;
+}
+tr#VII{
+    background-color: #ffdaf0;
+}
+tr#VIII{
+    background-color: #ffcbcb;
+}
+tr#IX{
+    background-color: #ffa9a9;
+}
+tr#X{
+    background-color: #FF8B8B;
+}
+td:empty{
+    background-color: #ffffff;
+}
+
+td, th{
+    padding: 10px ;
+    margin-top: 15px;
+
+    border: 5px solid rgb(255, 255, 255);
+    border-radius:15px;
+  }
+
+table{
+    margin: 20px;
+}
