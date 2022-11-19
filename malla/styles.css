@@ -54,3 +54,12 @@ table{
 #content{
     font-size: larger;
 }
+
+#attribution{
+    font-size: small;
+}
+
+#check, #nocheck{
+    width: 25px;
+    height: 25px;
+}
