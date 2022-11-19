@@ -6,16 +6,22 @@ db = SQLAlchemy()
 DB_NAME = "database.db"
 
 def crear_app():
+    # Crear app y base de datos
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'poo'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
+    # Importar vistas de la app
     from .views import views
     from .auth import auth
+    from .materias import materias
+    from .carreras import carreras
 
     app.register_blueprint(views, url_prefix = '/')
     app.register_blueprint(auth, url_prefix = '/')
+    app.register_blueprint(materias, url_prefix = '/')
+    app.register_blueprint(carreras, url_prefix = '/')
 
     from .models import Usuario
 

@@ -19,13 +19,14 @@ def materias():
 
         if not nombreUsuario or not correo or not carrera:
             return "<h1>Debes llenar todos los campos</h1>"
-        elif Usuario.query.filter_by(correo=correo).count() > 0:
+        elif Usuario.query.filter_by(correo_usuario=correo).count() > 0:
             return "<h1>Correo repetido</h1>"
         else:
-            nuevoUsuario = Usuario(nombre=nombreUsuario, correo=correo, carrera=carrera)
+            nuevoUsuario = Usuario(nombre_usuario=nombreUsuario, correo_usuario=correo, carrera_usuario=carrera)
             db.session.add(nuevoUsuario)
             db.session.commit()
     
     usuarios = Usuario.query.all()
+    print(usuarios)
     return render_template("usuarios.html", usuarios=usuarios)
 

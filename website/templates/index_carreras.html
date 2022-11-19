@@ -1,0 +1,25 @@
+<form action="/add_carrera" method="POST">
+    <input type="text", name="nombre" placeholder="Nombre de la carrera">
+    <input type="text", name="codigo" placeholder="Código de la carrera">
+    <input type="text", name="creditos" placeholder="Créditos totales de la carrera">
+    <input type="text", name="coordinador" placeholder="Nombre del coordinador de la carrera">
+    <input type="text", name="ecoordinador" placeholder="Email del coordinador">
+
+    <button>Save</button>
+</form>
+
+<div>
+    {% for carrera in carreras %}
+    <div>
+        <h1>{{carrera.nombre}}</h1>
+        <div>
+        <a href="{{url_for('carreras.edit_carrera', id=carrera.id)}}">Edit</a>
+        <a href="{{url_for('carreras.delete_carrera', id=carrera.id)}}">Delete</a>
+        </div>
+        <p>{{carrera.codigo}}</p>
+        <p>{{carrera.creditos}}</p>
+        <p>{{carrera.coordinador}}</p>
+        <p>{{carrera.ecoordinador}}</p>
+    </div>
+    {% endfor %}
+</div>

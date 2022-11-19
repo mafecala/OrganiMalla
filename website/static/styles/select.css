@@ -1,0 +1,148 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-image: linear-gradient(90deg, rgba(0, 103, 130, 1) 0%, rgba(0, 201, 150, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+body::-webkit-scrollbar{
+    width: 12px;
+    background-color: rgba(0, 201, 150, 1);
+    
+}
+body::-webkit-scrollbar-thumb{
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.476);
+    border-radius: 5px;
+    border-right: 2px solid rgba(0, 201, 150, 1);
+}
+.formbox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.25);
+    margin: 3rem auto;
+    margin-top: 2rem;
+    min-height: 400px;
+    max-width: 700px;
+    max-height: 80%;
+    overflow: auto;
+}
+.formbox::-webkit-scrollbar{
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0);
+    
+}
+.formbox::-webkit-scrollbar-thumb{
+    width: 12px;
+    background-color: rgba(0, 201, 151, 0.25);
+}
+
+.formbox-title{
+    user-select: none;
+    font-weight: 600;
+    font-size-adjust: none;
+    text-align: center;
+    width: 90%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.684);  
+}
+.formbox-content{
+    display: flex;
+    transition: all 0.3s ease;
+    padding: 5px;
+    width: 94%;
+    float: left;
+    text-align: left;
+    margin-top: 1rem;
+    
+    align-items: center;
+}
+.formbox-content:hover{
+    background-color: rgba(255, 255, 255, 0.318);
+}
+.formbox-desc{
+    position: relative;
+    margin-left: 0.5rem;
+    width: 100%;
+    transition: box-shadow 0.3s ease;
+    transition: background-color 1s ease;
+    /* border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25); */
+}
+.formbox-desc-title{
+    padding: 5px;
+    font-weight: 600;
+    float: left;
+    /*border: 1px solid black;/*quitar*/ 
+}
+.formbox-desc-description{
+    padding: 5px;
+    float: left;
+}
+.formbox-desc-checkbox{
+    display: none;
+    margin: 0 auto;
+}
+
+.formbox-desc-checkbox-label::before{
+    transition: background-color 1s ease;
+    transition: opacity 0.5s ease;
+    background-color: rgb(196, 255, 196);
+    border: 2px solid rgb(0, 201, 60);
+    border-radius: 50%;
+    padding: 2px;
+    margin: 0 auto;
+    content: "✔️";
+    font-size: 10px;
+    opacity: 100%;
+    cursor: pointer;
+}
+.formbox-content input[type=checkbox]:checked + label::before{
+    opacity: 20%;
+    border-radius: 50%;
+    border: 2px solid rgb(201, 0, 0);
+    background-color: rgb(255, 185, 185);
+    content: "✖️";   
+}
+
+.formbox-content input[type=checkbox]:checked ~ .formbox-desc{
+    border-top: 0;
+    border-bottom: 0;
+    background-color: rgba(194, 255, 203,0.7);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.055);
+}
+.boton{
+    letter-spacing: 3px;
+    font-size: 1em;
+    font-weight: 600;
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.408);
+    border: 0px;
+
+}
+
+.s{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+.home-text{
+    padding: 10px;
+    background-color: rgba(26, 236, 255, 0.255);
+    text-align: center;
+    color: white;
+    letter-spacing: 4px;
+}

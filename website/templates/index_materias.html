@@ -1,0 +1,36 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            {{ message }}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+ 
+<form action="/new" method="POST">
+     
+    <input type="text" name="nombre_materia" placeholder="Nombre materia">
+    <input type="text" name="codigo_materia" placeholder="Codigo materia">
+    <input type="text" name="creditos_materia" placeholder="Creditos materia">
+    <input type="text" name="area_materia" placeholder="Area materia">
+
+    <button type="submit">Save</button>
+
+</form>
+
+<div>
+    {% for materia in materias %}
+
+    <div>
+        <h5>{{materia.nombre_materia}}</h5>
+        <div>
+            <a href="{{ url_for("materias.update", id_materia = materia.id_materia) }}">Editar</a>
+            <a href="{{ url_for("materias.delete", id_materia = materia.id_materia) }}">Eliminar</a>
+        </div>
+        <p>{{materia.codigo_materia}}</p>
+        <p>{{materia.creditos_materia}}</p>
+        <p>{{materia.area_materia}}</p>
+    </div>
+
+    {% endfor %}
+
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/select.css">
+    <link rel="shortcut icon" href="../static/imgs/organimalla.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap" rel="stylesheet">
+    <title>ORGANIMALLA</title>
+</head>
+<body >
+    <form action="/seleccionar_materias" method="POST" class="formbox">
+        <!-- Titulo -->
+        <p class="formbox-title">SELECCIÓN DE MATERIAS APROBADAS</p>
+        <!-- Ciclo para mostrar todos los elementos de una matriz -->
+        {% for value in lista %}
+        <div class="formbox-content">
+            <input class="formbox-desc-checkbox" type="checkbox" id="{{value[1]}}" name="a" value="{{ value[0] }}">
+            <label for="{{value[1]}}" class="formbox-desc-checkbox-label"></label>
+            <div class="formbox-desc">
+                <span class="formbox-desc-title">{{value[0]}}</span>
+                <div>
+                    <span class="formbox-desc-description">Código: {{value[1]}}</span>
+                    <span class="formbox-desc-description">Lorem ipsu</span>
+                </div>
+            </div>
+        </div>
+        {% endfor %} 
+        <input class="boton" type="submit">
+    </input>      
+    </form>
+    
+</body>
+</html>
