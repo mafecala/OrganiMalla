@@ -57,16 +57,13 @@ def delete(id_materia):
 
 @materias.route("/seleccionar_materias", methods=['GET', 'POST'])
 def seleccionar_materias():
-    l1=["Cálculo Integral","1"]
-    l2=["Álgebra","2"]
-    l3=["POO","3"]
-    l4=["Circuitos 1","4"]
-    l5=["Mecánica","5"]
-    l6=["Cálculo diferencial","6"]
-    l7=["Materia","7"]
-    lista=[l1,l2,l3,l4,l5,l6,l7]
+    materias = Materia.query.all()
     if request.method == 'POST':
         materias_seleccionadas = request.form.getlist("a")
-        print(request.form.getlist("a"))
-        return render_template("home.html")
-    return render_template("select.html",lista=lista)
+        return redirect(url_for("home"))
+    return render_template("select.html",materias=materias)
+
+
+@materias.route("/home")
+def home():
+    return render_template("home.html")
