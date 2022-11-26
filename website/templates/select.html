@@ -14,15 +14,16 @@
         <!-- Titulo -->
         <p class="formbox-title">SELECCIÓN DE MATERIAS APROBADAS</p>
         <!-- Ciclo para mostrar todos los elementos de una matriz -->
-        {% for value in lista %}
+        {% for materia in materias %}
         <div class="formbox-content">
-            <input class="formbox-desc-checkbox" type="checkbox" id="{{value[1]}}" name="a" value="{{ value[0] }}">
-            <label for="{{value[1]}}" class="formbox-desc-checkbox-label"></label>
+            <input class="formbox-desc-checkbox" type="checkbox" id="{{ materia.id_materia }}" name="a" value="{{ materia.nombre_materia }}">
+            <label for="{{ materia.id_materia }}" class="formbox-desc-checkbox-label"></label>
             <div class="formbox-desc">
-                <span class="formbox-desc-title">{{value[0]}}</span>
+                <span class="formbox-desc-title">{{ materia.nombre_materia }}</span>
                 <div>
-                    <span class="formbox-desc-description">Código: {{value[1]}}</span>
-                    <span class="formbox-desc-description">Lorem ipsu</span>
+                    <span class="formbox-desc-description">Código: {{ materia.id_materia }}</span>
+                    <span class="formbox-desc-description">Créditos: {{ materia.creditos_materia }}</span>
+                    <span class="formbox-desc-description">Área: {{ materia.area_materia }}</span>
                 </div>
             </div>
         </div>
